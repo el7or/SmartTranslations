@@ -1,0 +1,946 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+
+</title><link rel="stylesheet" type="text/css" href="Styles/common.css" /><link href="Content/bootstrap.css" rel="stylesheet" /><link href="Content/bootstrap.min.css" rel="stylesheet" /><link href="Content/Site.css" rel="stylesheet" />
+    <link href="Styles/mail.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="css/sweetalert.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+<meta http-equiv="Pragma" content="no-cache" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        .rmItem, .rmLink {
+            height: 50px !important;
+        }
+
+        .rcbSlide {
+            z-index: 9999 !important;
+        }
+
+        html .RadNavigation .user .rnvLink {
+            padding-right: 100px;
+            background: url("Images/photo-profile-s.png")  200px 4px no-repeat !important;
+        }
+    </style>
+<link href="/WebResource.axd?d=oO40Bmgl131nVzNYSi8Tp8m9jNJLwTcRlyGUMuQ8T0KgMPve01ur18AAnM0qF0j0xUsysxzjGIbG7hYu8WzSC6uHFo8E-J50m41uHb1V-Wbi7j7mQ9p3qZV_NS_Je1lCXzTU-vlMEJwQwZgSip-4pQ2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=7Fzu4a8bkJp4gBY4Ih9ZHLr0q9Q-6aYyR052OXOlZSRYzPt_0wBFy7fIy6bIyUHbbm7Q7qdOnQqNlBcPFX1uVmKu2Ny2ZLEoV016a1UZCgZZVndFsbJmuVWO4QZwFN95JHhnigszIAaGdH9H_yQK6cyScVXZZJcZKmAZYKNaY13fNnPezPextaA8X-J4NNw80&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=VdPoLqp1pEU6N0-IfFplZHSlbmuokJ4ACSEhq1NoWDkO6CB0i27Q0mUG8oIq7k4_nLI3FXYGXKw80EgC1XWVWRqLWvWZNQfhVnaWJ58UBFci7zY9wzW30rNBBRaEnGwx3qo7bMG-TGHCN3qPVQHsBQ2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=6d0ORl_GDQ8il0vfaye5YW45GZzWJna-VfUhcx4AghADQ3d853LElHE3lpDlHHOZoClAWVkaHlrFmzAynBm6uht9hMiDZqQnnspyEovdSwJ0vvhJiCI4fl2tHHzsV7bJ-24y8JSyhhtxa3heYX53AA2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=Uycoz_J_WDsH_gCg373xH6C6DgWqFhvYPRJ6DNwoQdDJ6eY4EhzLs4JD4tnmiBT8AESySxPca0cLKGD3WUs9duJvDNfhNPsqJGdrt__XX4Z9HXmPhZfxJd0h-_WU8jCzV4SbZ7F-jTM_UayRv4oDgQ2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=scU4zlP5U50gbnxCnkn5N0aSeuD3VBP8MaUWj00Sfv8Bj24qFmfbtt6CniFEtSRrZjblrqEOWS1WylFJn-fJwjYLc4IEsoVZ4M_MuLMBGyLUrJt9kNvD-tS6j7CHG0dNfJHaGAfFzuLBMNxf7hnP3g2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=GDmoD6dbaNFbdopiJBMqyN-hQe_VM6bYjKJ-pIn0E33jr5LJ_eWoC9lDKFk48GI5SHDWjSjQzgSJUW8o3v-tNZ55l3yRSQmW2tKObwawGQsKLB9k4rAEYKS9YakrniL36il_yUTrhXO-Sate07_-Xi074kxzqeA_35W1QffEPcg1&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=U4fmqBE__aLMLwH7DJyJBI3IStRXUYEOyOGThmggdeMOFEyhkVqJoiOJAdqZp9I1WYf0m0aXFBtnDrfC_1VWdNMmLHwnwKLpJedAHgesuO6cfBLVdZUqOENudyasmnH4vBWArwohjzLooPTVirnzZQ2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=j9E3wBd0NFYb3HoiIdXjZRwcJQBPFOOj0RFCRPwtb_IXaL5UOsaoBRKh5RsNFDueIPNPcxMlo48vlcXdL0BeRmR3z4CeXL6XDB5TSBMMP_tf0jr_ABf0q19UPhkfqH2oilTN6Y6SBPNdjd3ONsR5lEP5c6PYMi8eTIuHQSAcJ481&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=ilr89SiMvCL68UrDG12mxkyuvrhl2m6YSN024XM50NkZSnRWPrN3GoJDCwUms6_o_j_yQALHajaVASwBEr13YRwrcoZG8_yeJXMiVgRUSD39G9yNWkf1b68MGCw7tylN9QNYizImwE_cd_bdjEl92A2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=BiaVDRBhGiOokFdLKctpJKmJJbo7Ab-AjZVWRANNDN6At1LjN6v7Y95hBk7kO51LGytX_MFuuKnhWElQPdSJfEuUims6DiSo3oS2q_0ERMZKKAKrtFZN-OFpsfe1odrIR8Rwq9Jc-bDBYynloKCMtTY5ja9TEx5-87K2QRW3-Fo1&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=ki1n1Eahlh7Hg67y-z8gJkPAsksn3VbEV8gFI2S4Bl34yT_LBIEDg0pUL8ot1B7mgsyin7nqKO0Ch4sVpw-wQv-9j0nHEwdfMbQZvli8pQmu5XwhFAHIiH-bsVQhJnsHUdHomWMtbIal5Z2gAu7L5A2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=ZwjCoXcyJ5o6IV5mLLTyUhh-nGyIWovd-pc4JDQEJRO8AOyPMZWyrpMe2vr0tQcLh50Hgt72fSs--OFG5OBGHvT2UbEU9BAVlIU7dAxHDiGJ_QhGu7HhcFcTm8rUWZPUZ44UXv82BHhVv1noqOYWq-lC2SXSbLGr54egkKh_FHA1&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=qpDogBCh8B2zFH7Wt5kgoMk1F0A5qveavH6vdntD8fB4d_LOubPMtqC3IaXnF5_mXloG9UlDxnatrTtfI22NOYnz7blcDouu8vXPVkibgveXwOE_8PJViOtVfwnUYSFD3tRxC31_ZtlwHdz2xtA18w2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=1LtVA1NZD4y8LBdR-VZPhfAX69Tr0Ohwuk-yFmPWmxGU56fGjtT9pWcqjj4mLLBLoz10IVZ01yPy653YN6L5DBmx2ZR_G6mT0lkFj_ceyb41zvF2ZXVlSbOABAduQGV1D-CpQ2GSqnRc93G5TyGSPyQO2iHWGHVcQlB9ZetoZh41&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=3Ru5YSy7x0YR23l-YG1-QR4aPs5gu5NFIIOep1GZ0zTqhJrTR1mU_RlGIRRmieITLgpfWO_tdOG7DbI4-tRgmyIgLq0jD50XjA7Xpx8U88iV_7jvyHUzBdxTRts316QXqqwzU4ept3T8O3NRZHxL-w2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=P9En-AS6AxzyZehpCQh8l5fbhKfI9jcyaNwKzLtQdpHg-G2Q6JaVxa6JmMZ9eVMSsJAw8LvKieG1wmNqaL4wr9YXEX6Z-yI8q5CSgSZSGrLpRgUifwIw3lI8n5Mq1Uo9ETi7KpAz0XgD3Ey9gd3NnXPdYuZGg0l_tZ0bSbTYI0w1&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=I2KMDU4OojcY5XW9Fb-hAfVgHq92BZ44JjS6oL-aIF759_2XQfHoJ08Widxb2KHePzvyqwl0uCK3KIpQRE-T-dpvUXeC8BcmALIZaoDSNUKGA7dQHavQGtIcRxHo0tlRQB1xbm3UT2HoOVe6U6ReMg2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=q8swPLHeB9zXHzjJq1gQ_RgHcyDXnAZkVhorwo-TiiPzw-V5fvKZo_Moo9Pw0W5qOi5_sXuis6IqNGO2mtd7Ty5x3PVoXAlARojkp51yB_08ARr5pwS0uCfr80dnmqYn55S0Iqs7IAb7F5a8iUTDuleS7EvMgPk5sY5O6a0qujA1&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=jATR2aT4MP7vIvfz8UagJC9wD0zNzz7XDC7dyTXfvGXqbjDv0gAHDpbOSqlgHdshCoLcqg4O8tFvF3Z8zTg3Tq6eZ6qRzlzdRlHjmAJ9NRI0UtO-zZuKulvpyvAvd7bwXkuLTcRcH8YO6EwdvflUcA2&amp;t=636430970607448931" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=WcGO-JReoDg8jfiZcIR4vXERQBtH2pGbzeqjDc7D91GIkJvvvKAg60_4dOrGKMpNJiRjVpT8EV9xA19KvblfhKpxKIW18ycM8u1QQDqeFnu1tAAlg-DTC-zGIO02kYgvV3bU0emA2CUZS2dQHknJOHxkhUAxR_cXJOUv1yAzumU1&amp;t=636430970605213936" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body>
+    <form method="post" action="./ProjectTasksDetailsTR.aspx?taskid=cf63cc5d-ff35-472c-9bd6-ef2298447638" id="form1" class="clear">
+<div class="aspNetHidden">
+<input type="hidden" name="RadScriptManager1_TSM" id="RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZJVaEBx_Kkr9G6EMcVtBhDMW0HtNTRh5oajvPtkNBP3-jKndrynjAwJQSWNcZmwyBA2&amp;t=636399207241906023" type="text/javascript"></script>
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a50871f79-10fd-48e0-8973-f573d071cb52%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%3aen-US%3aa519da8a-d673-48a9-9976-4b08756261d2%3a16e4e7cd%3af7645509%3a22a6274a%3a33715776%3a24ee1bba%3ae330518b%3a2003d0b8%3ac128760b%3a1e771326%3a88144a7a%3ac8618e41%3a1a73651d%3a16d8629e%3a8c2d243e%3a4877f69a%3a86526ba7%3a874f8ea2%3af46195d3%3a19620875%3ab2e06756%3a92fe8ea0%3afa31b949%3a490a9d4e%3abd8f85e4%3a681d7259%3ab7778d6c%3ae085fe68%3a6d43f6d9%3a52af31a4%3a74603f77%3acda80b3%3aaa288e2d%3ab092aa46" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E3F53E6E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="HyCXci5l+PFeVhvsdLznOFYEH7RVhWzWskUdzB9qNncZFxLvmoRN7Ki1VfmEb16/ogdWRl+dcHcP7LSYMMbPNmO2a9yEDk76heB6X9NPqahJrwrcIR61yocSGQRuFGLuddR2KvswxCqXB73YCZ48dlixfuV8yJ9tn1c1vHWr0dlvfDwE5I6hWa9/RuRaXcjMOVUEPW00w86c5l24hvAtDxFMFDKjHea0HsdlTUgUWosOyUviiJ5dUczJcalY52JHcnBg6MXwPSRXl2Cpo+W7nNNLYM2dg4a7uQaGDGq7QLXtOYonlXH9xQIwRe6hAj/TCw9vBncyv0VCaGVCtFqa8wCTSpeM/DemXVeHsIyPOtpUoJvFb50wd4RPpnrdUxPifc75Q4IbMzptSaYQFmW11ocTuQJ4MFPZ8vUjGEN9xHx5RoogLTfYeHu2D7iHd5TY" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <div id="about" class="slider">
+            <header class="tm-header" id="logo">  </header>
+            
+            <h2 class="logo">
+                <img src="Content/Images/logo.png" />
+                
+            </h2>
+            
+            <div tabindex="0" id="ctl00_verticalMenu" class="RadMenu RadMenu_BlackMetroTouch main-menu">
+	<!-- 2016.3.914.45 --><ul class="rmRootGroup rmVertical">
+		<li class="rmItem rmFirst rmLast calendar"><a class="rmLink rmRootLink" href="DefaultTR.aspx"><span title="" class="rmLeftImage"></span><span class="rmText">Home</span></a></li>
+	</ul><script type="text/javascript">
+		Telerik.Web.UI.RadMenu._adjustRootItemWidth("ctl00_verticalMenu");
+	</script><input id="ctl00_verticalMenu_ClientState" name="ctl00_verticalMenu_ClientState" type="hidden" />
+</div>
+            
+
+            
+        </div>
+
+        <div class="page">
+            <div class="main-header clear" align="right">
+                <div class="home-btn">
+                    <span class="icon icon-Home"></span>
+                    <span class="text"> &nbsp; </span>
+                </div>
+
+                <div id="ctl00_mainNavigation" class="RadNavigation RadNavigation_Sunset header-info">
+	<div class="rnvRootGroupWrapper">
+		<ul class="rnvRootGroup rnvGroup">
+			<li class="rnvItem rnvFirst rnvLast user" style="width:280px;"><span class="rnvRootLink rnvLink"><span title="" class="rwzSprite icon icon-Arrow-South"></span><span class="rnvText">Test Tr</span></span></li>
+		</ul>
+	</div><div class="rnvHiddenGroups">
+		
+	</div><input id="ctl00_mainNavigation_ClientState" name="ctl00_mainNavigation_ClientState" type="hidden" />
+</div>
+            </div>
+            <div>
+                
+                
+                
+                
+
+
+                
+                <div id="ctl00_RadFormDecorator2" class="RadFormDecorator" style="display:none;">
+	<script type="text/javascript">
+//<![CDATA[
+
+if (typeof(WebForm_AutoFocus) != 'undefined' && !isWebFormAutoFocusMethodCalled)
+{   
+	var old_WebForm_AutoFocus = WebForm_AutoFocus;
+	WebForm_AutoFocus = function(arg)
+	{
+		Sys.Application.add_load(function()
+		{            
+			old_WebForm_AutoFocus(arg);
+			WebForm_AutoFocus = old_WebForm_AutoFocus;
+		});
+	}
+    var isWebFormAutoFocusMethodCalled = true;
+}
+if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
+{
+	if (Telerik.Web.UI.RadFormDecorator)
+	{
+		Telerik.Web.UI.RadFormDecorator.initializePage("ctl00_RadFormDecorator2", "zoneMain", "Sunset", 65535);
+	}
+}
+//]]>
+</script><input id="ctl00_RadFormDecorator2_ClientState" name="ctl00_RadFormDecorator2_ClientState" type="hidden" />
+</div>
+                <div id="zoneMain" class="zoneEntity" style="width: 100% !important; padding: 0px; margin: 0px;">
+                    
+    <div id="ctl00_MainContent_RadWindowManager1" style="display:none;">
+	<div id="ctl00_MainContent_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialog rwAlertDialog">
+			<div class="rwDialogContent">
+				<div class="rwDialogMessage">{1}</div>
+			</div>
+			<div class="rwDialogButtons">
+				<button class="rwOkBtn" onclick="$find('{0}').close(true); return false;" >##LOC[OK]##</button>
+			</div>
+		</div>
+		</div><div id="ctl00_MainContent_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialog rwPromptDialog">
+			<div class="rwDialogContent">
+				<div class="rwDialogMessage">{1}</div>
+				<div class="rwPromptInputContainer">
+					<script type="text/javascript">
+						function RadWindowprompt_detectenter(id, ev, input) {
+							if (!ev) ev = window.event;
+							if (ev.keyCode == 13) {
+								var but = input.parentNode.parentNode.parentNode.getElementsByTagName("button")[0];
+								if (but) {
+									if (but.click) {
+										but.click();
+									}
+									else if (but.onclick) {
+										but.focus();
+										var click = but.onclick;
+										but.onclick = null;
+										if (click) click.call(but);
+									}
+								}
+								return false;
+							}
+							else return true;
+						}
+						</script>
+					<input title="Enter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwPromptInput radPreventDecorate" value="{2}" />
+				</div>
+			</div>
+			<div class="rwDialogButtons">
+				<button class="rwOkBtn" onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value); return false;" >##LOC[OK]##</button>
+				<button class="rwCancelBtn" onclick="$find('{0}').close(null); return false;" >##LOC[Cancel]##</button>
+			</div>
+		</div>
+
+		</div><div id="ctl00_MainContent_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialog rwConfirmDialog">
+			<div class="rwDialogContent">
+				<div class="rwDialogMessage">{1}</div>
+			</div>
+			<div class="rwDialogButtons">
+				<button class="rwOkBtn" onclick="$find('{0}').close(true); return false;" >##LOC[OK]##</button>
+				<button class="rwCancelBtn" onclick="$find('{0}').close(false); return false;" >##LOC[Cancel]##</button>
+			</div>
+		</div>
+		</div><input id="ctl00_MainContent_RadWindowManager1_ClientState" name="ctl00_MainContent_RadWindowManager1_ClientState" type="hidden" />
+</div>
+    
+        <style>
+            .fsRow {
+                display: inline-block !important;
+                vertical-align: top !important;
+                margin-top: 0px !important;
+                margin-left: 5px !important;
+                margin-right: 5px !important;
+                padding: 10px !important;
+                border-radius: 4px;
+            }
+
+            .rdfLabel {
+                width: 90px;
+                vertical-align: middle;
+            }
+
+            legend, .rdfLegend {
+                margin-left: 20px !important;
+                margin-right: 20px !important;
+            }
+
+            .demo-container {
+                background-color: whitesmoke;
+            }
+
+            #demo .RadDataForm {
+                position: relative;
+                overflow: visible;
+                width: 100%;
+            }
+
+            #demo .RadDataForm {
+                padding-top: 62px;
+            }
+
+            #demo .rdfHeader {
+                position: absolute;
+                top: -5px;
+                left: -16px;
+                width: 110%;
+                height: 79px;
+                background: url('images/header.png') 0 0 no-repeat;
+            }
+
+            #demo .rdfHeaderInner {
+                height: 63px;
+                margin: 4px;
+                font-size: 20px;
+                line-height: 60px;
+                padding-left: 20px;
+                text-align: center;
+                color: black;
+                font-weight: bold;
+            }
+
+            #demo .rdfBorders {
+                border-top: 0 none;
+            }
+
+            #demo .rdfBlock {
+                display: block;
+            }
+
+            #demo .rdfFieldValue {
+                font-size: 1.5em;
+            }
+
+            #demo .rdfHr {
+                width: 220px !important;
+                height: 1px;
+            }
+
+            * + html div.RadDataForm .rdfFieldset,
+            * + html div.RadDataForm .rdfCommandButtons {
+                width: auto;
+            }
+
+            .size-custom {
+                max-width: 450px;
+            }
+
+            .rdfCommandButtons {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+
+            html .demo-container .redColor {
+                color: red;
+            }
+
+            /*Wizard wrapper*/
+            #example .demo-container {
+                width: 725px;
+                margin: 40px auto 80px;
+                padding: 0 80px;
+                border: 0;
+                background: url(Images/shadow.png) no-repeat 0 bottom;
+            }
+
+            .demo-container .wizardHeader {
+                width: 100%;
+                height: 50px;
+            }
+
+            /*Wizard*/
+            .demo-container .RadWizard {
+                padding: 20px;
+                border: 1px solid #f1f1f1;
+                border-bottom: 0;
+                box-shadow: 0 0 0 1px #fff;
+            }
+
+            .background-black .demo-container .RadWizard,
+            .background-blackmetrotouch .demo-container .RadWizard,
+            .background-glow .demo-container .RadWizard,
+            .background-office2010black .demo-container .RadWizard {
+                border: 0;
+                box-shadow: 0;
+            }
+
+            .demo-container .RadWizard_Material .rwzBreadCrumb .rwzText:before {
+                display: none;
+            }
+
+            .demo-container .RadWizard_Material .rwzBreadCrumb .rwzLink {
+                padding-left: 0;
+            }
+
+            /*Wizard content*/
+            .demo-container .inputWapper {
+                display: inline-block;
+                *display: inline;
+                position: relative;
+                zoom: 1;
+            }
+
+                .demo-container .inputWapper.first {
+                    margin-right: 35px;
+                }
+
+                .demo-container .inputWapper label {
+                    display: block;
+                    margin: 5px 0 0;
+                }
+
+            .demo-container .validator {
+                color: #ff0000;
+                top: 10px;
+                right: 0;
+            }
+
+            .demo-container .conditions {
+                display: block;
+                color: #a7a7a7;
+                font-size: 0.857em;
+            }
+
+            .demo-container .RadWizard .complete {
+                height: auto;
+                padding: 75px 0;
+                text-align: center;
+            }
+
+            .rwzContent {
+                height: auto !important;
+            }
+
+            textarea {
+                width: 100% !important;
+            }
+
+                input[disabled=disabled], textarea[disabled=disabled] {
+                    opacity: 1 !important;
+                    background-color: whitesmoke !important;
+                }
+
+            h3 {
+                padding: 0 15px;
+            }
+
+            ul.list-group span.lbl {
+                font-weight: bold;
+            }
+
+            div.btn-group-vertical {
+                width: 100%;
+            }
+
+                div.btn-group-vertical span {
+                    margin-right: 10px;
+                }
+
+                div.btn-group-vertical button {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 10px 0;
+                    border-radius: 6px !important;
+                    opacity: 1 !important;
+                }
+
+            .ruBrowse, .ruFakeInput {
+                height: 30px !important;
+            }
+        </style>
+        <script type="text/javascript" lang="javascript">
+            // check if new project or not
+            function checkQueryString(field) {
+                var url = window.location.href;
+                if (url.indexOf('?' + field + '=') != -1)
+                    return true;
+                else if (url.indexOf('&' + field + '=') != -1)
+                    return true;
+                return false
+            }
+
+            // inputs validations
+            (function () {
+                window.pageLoad = function () {
+                    var $ = $telerik.$;
+                    var cssSelectors = ["basicInfo", "FilesInfo"];
+                    var breadCrumbButtons = $(".rwzBreadCrumb .rwzLI");
+
+                    for (var i = 0; i < cssSelectors.length; i++) {
+                        $(breadCrumbButtons[i]).addClass(cssSelectors[i]);
+                    }
+                }
+
+                window.OnClientLoad = function (sender, args) {
+                    for (var i = 1; i < sender.get_wizardSteps().get_count() ; i++) {
+                        sender.get_wizardSteps().getWizardStep(i).set_enabled(checkQueryString('taskid'));
+                    }
+                }
+
+                window.OnClientButtonClicking = function (sender, args) {
+                    if (!args.get_nextActiveStep().get_enabled()) {
+                        args.get_nextActiveStep().set_enabled(true);
+                    }
+                    console.log(args.get_nextActiveStep());
+                    console.log(sender.get_activeWizardStep());
+
+                }
+
+                window.AcceptTermsCheckBoxValidation = function (source, args) {
+                    var termsChecked = $telerik.$("input[id*='AcceptTermsCheckBox']")[0].checked;
+                    args.IsValid = termsChecked;
+                }
+
+                window.UserNameLenghthValidation = function (source, args) {
+                    var userNameConditions = $telerik.$(".conditions")[0];
+                    var isValid = (args.Value.length >= 4 && args.Value.length <= 15);
+                    args.IsValid = isValid;
+                    $telerik.$(userNameConditions).toggleClass("redColor", !isValid);
+
+                }
+
+                window.PasswordLenghthValidation = function (source, args) {
+                    var passwordConditions = $telerik.$(".conditions")[1];
+                    var isValid = args.Value.length >= 6;
+                    args.IsValid = isValid;
+                    $telerik.$(passwordConditions).toggleClass("redColor", !isValid);
+                }
+            })();
+
+            
+
+            $(document).ready(function () {
+                //// Change Task status
+                //$('div.btn-group-vertical button').click(function () {
+                //    $('div.btn-group-vertical button').attr('class', 'btn btn-lg btn-default').find('span').removeAttr('class');
+                //    $(this).attr('class', 'btn btn-lg btn-primary').find('span').attr('class', 'glyphicon glyphicon-hand-right');
+                //    var status = $(this).text();
+                //    $.ajax({
+                //        type: "POST",
+                //        url: "ProjectTasksDetailsTr.aspx/ChangeStatus",
+                //        data: '{status: "' + status + '" }',
+                //        contentType: "application/json; charset=utf-8",
+                //        dataType: "json",
+                //        success: function (response) {
+                //            swal({
+                //                title: "Success!",
+                //                text: "Task Status changed !",
+                //                type: "success",
+                //                timer: 2000,
+                //                showConfirmButton: false
+                //            });
+                //            //alert(response.d);
+                //        },
+                //        failure: function (response) {
+                //            alert(response.d);
+                //        }
+                //    });
+                //});
+
+                // load Task status
+                var taskState = $('#MainContent_hfStatusHeader').val();
+                $('div.btn-group-vertical button').attr({ 'class': 'btn btn-lg btn-default', 'disabled': 'disabled' }).find('span').removeAttr('class');
+                if (taskState == 'InProgress') {
+                    $('div.btn-group-vertical button:nth-of-type(2)').attr('class', 'btn btn-lg btn-primary').find('span').attr('class', 'glyphicon glyphicon-hand-right');
+                }
+                else if (taskState == 'Completed') {
+                    $('div.btn-group-vertical button:nth-of-type(3)').attr('class', 'btn btn-lg btn-primary').find('span').attr('class', 'glyphicon glyphicon-hand-right');
+                }
+                else {
+                    $('div.btn-group-vertical button:nth-of-type(1)').attr('class', 'btn btn-lg btn-primary').find('span').attr('class', 'glyphicon glyphicon-hand-right');
+                }
+            });
+
+
+            function MyAlert() {
+                //swal('Success!', 'Saved !', 'success');
+                swal({
+                    title: "Success!",
+                    text: "Saved !",
+                    type: "success",
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }
+
+            ////RadConfirm
+            //function RadConfirm(sender, args) {
+            //    var callBackFunction = function (shouldSubmit) {
+            //        if (shouldSubmit) {
+            //            //initiate the original postback again
+            //            sender.click();
+            //            if (Telerik.Web.Browser.ff) { //work around a FireFox issue with form submission, see http://www.telerik.com/support/kb/aspnet-ajax/window/details/form-will-not-submit-after-radconfirm-in-firefox
+            //                sender.get_element().click();
+            //            }
+            //        }
+            //    };
+
+            //    var text = "Are you sure you want to Cancel this Task?";
+            //    radconfirm(text, callBackFunction, 250, 150, null, "Cancel !");
+            //    //always prevent the original postback so the RadConfirm can work, it will be initiated again with code in the callback function
+            //    args.set_cancel(true);
+            //}
+            //function RadConfirm2(sender, args) {
+            //    var callBackFunction = function (shouldSubmit) {
+            //        if (shouldSubmit) {
+            //            //initiate the original postback again
+            //            sender.click();
+            //            if (Telerik.Web.Browser.ff) { //work around a FireFox issue with form submission, see http://www.telerik.com/support/kb/aspnet-ajax/window/details/form-will-not-submit-after-radconfirm-in-firefox
+            //                sender.get_element().click();
+            //            }
+            //        }
+            //    };
+
+            //    var text = "Are you sure you want to Re-Activate this Task?";
+            //    radconfirm(text, callBackFunction, 250, 150, null, "Re-Activate !");
+            //    //always prevent the original postback so the RadConfirm can work, it will be initiated again with code in the callback function
+            //    args.set_cancel(true);
+            //}
+        </script>
+    
+    <div id="ctl00_MainContent_RadFormDecorator3" class="RadFormDecorator" style="display:none;">
+	<script type="text/javascript">
+//<![CDATA[
+
+if (typeof(WebForm_AutoFocus) != 'undefined' && !isWebFormAutoFocusMethodCalled)
+{   
+	var old_WebForm_AutoFocus = WebForm_AutoFocus;
+	WebForm_AutoFocus = function(arg)
+	{
+		Sys.Application.add_load(function()
+		{            
+			old_WebForm_AutoFocus(arg);
+			WebForm_AutoFocus = old_WebForm_AutoFocus;
+		});
+	}
+    var isWebFormAutoFocusMethodCalled = true;
+}
+if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
+{
+	if (Telerik.Web.UI.RadFormDecorator)
+	{
+		Telerik.Web.UI.RadFormDecorator.initializePage("ctl00_MainContent_RadFormDecorator3", "zoneTaskDetails", "Sunset", 65535);
+	}
+}
+//]]>
+</script><input id="ctl00_MainContent_RadFormDecorator3_ClientState" name="ctl00_MainContent_RadFormDecorator3_ClientState" type="hidden" />
+</div>
+    <div id="zoneTaskDetails" class="zoneEntity" style="margin: 20px;">
+        <fieldset class="fsRow" style="width: 100% !important; background-image: linear-gradient(#ebebeb,#fff);">
+            <legend class="rdfLegend rfdRoundedCorners ">
+                <fieldset style="padding: 8px; font-size: 16px; font-weight: 500;">Task Details</fieldset>
+            </legend>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <div class="demo-container">
+                    <div class="wizardHeader">
+                        <h1>
+                            <span id="MainContent_lblTaskSerial">1-28-2017</span></h1>
+                    </div>
+                    <div id="ctl00_MainContent_RadWizard1" class="RadWizard RadWizard_Sunset rwzHorizontal">
+	<ul class="rwzBreadCrumb rwzLeftImages">
+		<li class="rwzLI rwzFirst"><a class="rwzLink" href="#"><span class="rwzImage basicInfo"></span><span class="rwzText">Basic Data</span></a></li><li class="rwzLI rwzSelected rwzLast"><a class="rwzLink" href="#"><span class="rwzImage contactDetails"></span><span class="rwzText">Files</span></a></li>
+	</ul><div class="rwzProgressBar">
+		<span class="rwzProgress"></span>
+	</div><div class="rwzContentWrapper">
+		<div class="rwzContent">
+			<div class="rwzStep" id="MainContent_stepBasic">
+				
+                                <div class="row">
+                                    <div class="inputWapper col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <label for="ctl00_MainContent_txtJobType" style="font-weight:bold;">Job Type:</label>
+                                        <span id="ctl00_MainContent_txtJobType_wrapper" class="RadInput RadInput_Sunset" style="width:100%;"><input id="ctl00_MainContent_txtJobType" name="ctl00$MainContent$txtJobType" size="20" class="riTextBox riDisabled" disabled="disabled" value="Translation" type="text" /><input id="ctl00_MainContent_txtJobType_ClientState" name="ctl00_MainContent_txtJobType_ClientState" type="hidden" /></span>
+                                    </div>
+                                    <div class="inputWapper col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <label for="ctl00_MainContent_txtFromLangg" style="font-weight:bold;">Source Language:</label>
+                                        <span id="ctl00_MainContent_txtFromLangg_wrapper" class="RadInput RadInput_Sunset" style="width:100%;"><input id="ctl00_MainContent_txtFromLangg" name="ctl00$MainContent$txtFromLangg" size="20" class="riTextBox riDisabled" disabled="disabled" value="EN" type="text" /><input id="ctl00_MainContent_txtFromLangg_ClientState" name="ctl00_MainContent_txtFromLangg_ClientState" type="hidden" /></span>
+                                    </div>
+                                    <div class="inputWapper col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <label for="ctl00_MainContent_txtToLangg" style="font-weight:bold;">Target Language:</label>
+                                        <span id="ctl00_MainContent_txtToLangg_wrapper" class="RadInput RadInput_Sunset" style="width:100%;"><input id="ctl00_MainContent_txtToLangg" name="ctl00$MainContent$txtToLangg" size="20" class="riTextBox riDisabled" disabled="disabled" value="AR" type="text" /><input id="ctl00_MainContent_txtToLangg_ClientState" name="ctl00_MainContent_txtToLangg_ClientState" type="hidden" /></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="inputWapper col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <label for="ctl00_MainContent_txtwordCount" style="font-weight:bold;">Word Count:</label>
+                                        <div id="ctl00_MainContent_txtwordCount_wrapper" class="RadInput RadInput_Sunset" style="width:100%;">
+					<input id="ctl00_MainContent_txtwordCount" name="ctl00$MainContent$txtwordCount" class="riTextBox riDisabled" disabled="disabled" value="25" type="text" /><input id="ctl00_MainContent_txtwordCount_ClientState" name="ctl00_MainContent_txtwordCount_ClientState" type="hidden" />
+				</div>
+                                    </div>
+                                    <div class="inputWapper col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <label for="ctl00_MainContent_txtProjectManager" style="font-weight:bold;">Project Manager:</label>
+                                        <span id="ctl00_MainContent_txtProjectManager_wrapper" class="RadInput RadInput_Sunset" style="width:100%;"><input id="ctl00_MainContent_txtProjectManager" name="ctl00$MainContent$txtProjectManager" size="20" class="riTextBox riDisabled" disabled="disabled" value="Test PM" type="text" /><input id="ctl00_MainContent_txtProjectManager_ClientState" name="ctl00_MainContent_txtProjectManager_ClientState" type="hidden" /></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="inputWapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="ctl00_MainContent_txtTaskDesc">Task Description:</label>
+                                        <span id="ctl00_MainContent_txtTaskDesc_wrapper" class="RadInput RadInput_Sunset RadInputMultiline RadInputMultiline_Sunset" style="width:100%;"><textarea id="ctl00_MainContent_txtTaskDesc" name="ctl00$MainContent$txtTaskDesc" rows="3" cols="20" class="riTextBox riDisabled" disabled="disabled"></textarea><input id="ctl00_MainContent_txtTaskDesc_ClientState" name="ctl00_MainContent_txtTaskDesc_ClientState" type="hidden" /></span>
+                                    </div>
+                                </div>
+                            
+			</div><div class="rwzStep rwzActive" id="MainContent_stepFiles">
+				
+
+
+                                
+                                <div class="inputWapper col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <fieldset>
+                                        <legend>
+                                            <fieldset style="margin: 0px; padding: 10px;">
+                                                Input Files
+                                            </fieldset>
+                                        </legend>
+                                        
+                                        <label for="ctl00_MainContent_btnDownloadReceivedFile" id="MainContent_lblDownloadReceivedFile" style="font-weight:bold;">Download Task File:</label>
+                                        <button type="button" name="ctl00$MainContent$btnDownloadReceivedFile" value="TaskFile.backend.2017-09-26 (1).log" id="ctl00_MainContent_btnDownloadReceivedFile" class="RadButton RadButton_Sunset rbButton rbRounded rbLink rbIconButton"><span class="rbIcon rbPrimaryIcon rbDownload"></span><span class="rbText">TaskFile.backend.2017-09-26 (1).log</span><input id="ctl00_MainContent_btnDownloadReceivedFile_ClientState" name="ctl00_MainContent_btnDownloadReceivedFile_ClientState" type="hidden" /></button>
+                                        <br /> <br />
+                                        
+                                        
+
+                                        
+                                    </fieldset>
+
+                                    
+                                </div>
+
+
+
+                                <div class="inputWapper col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <fieldset>
+                                        <legend>
+                                            <fieldset style="margin: 0px; padding: 10px;">
+                                                Output Files
+                                            </fieldset>
+                                        </legend>
+                                        
+                                        <div class="row">
+                                            <div class="inputWapper col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <label for="ctl00_MainContent_uploadFinishedFile" style="font-weight:bold;">Upload Finished File:</label>
+                                                <div id="ctl00_MainContent_uploadFinishedFile" class="RadAsyncUpload RadUpload RadUpload_Sunset">
+					<input id="ctl00_MainContent_uploadFinishedFile_ClientState" name="ctl00_MainContent_uploadFinishedFile_ClientState" type="hidden" />
+				</div>
+                                            </div>
+                                            <div class="inputWapper col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <label for="ctl00_MainContent_btnSendTask" style="font-weight:bold;">Send Finished File:</label>
+                                                <button type="submit" name="ctl00$MainContent$btnSendTask" value="Send Email" id="ctl00_MainContent_btnSendTask" class="RadButton rbDisabled RadButton_Sunset rbButton rbRounded rbIconButton"><span class="rbIcon rbPrimaryIcon rbMail"></span><span class="rbText">Send Email</span><input id="ctl00_MainContent_btnSendTask_ClientState" name="ctl00_MainContent_btnSendTask_ClientState" type="hidden" /></button>
+                                            </div><br /><br /> 
+                                               
+                                            <div class="inputWapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                               <br /> <label for="ctl00_MainContent_btnDownloadFinishedFile" id="MainContent_lblDownloadFinishedFile" style="font-weight:bold;">Download Finished File:</label>
+                                                <button type="button" name="ctl00$MainContent$btnDownloadFinishedFile" value="Download" id="ctl00_MainContent_btnDownloadFinishedFile" class="RadButton rbDisabled RadButton_Sunset rbButton rbRounded rbLink rbIconButton"><span class="rbIcon rbPrimaryIcon rbDownload"></span><span class="rbText">Download</span><input id="ctl00_MainContent_btnDownloadFinishedFile_ClientState" name="ctl00_MainContent_btnDownloadFinishedFile_ClientState" type="hidden" /></button>
+                                                </div>
+                                                
+                                        </div>
+
+
+                                        
+                                    </fieldset>
+                                </div>
+
+
+                                
+                            
+			</div>
+		</div><ul class="rwzNav">
+			<li class="rwzLI"><button class="rwzButton rwzCancel" type="button"><span class="rwzText">Cancel</span></button></li><li class="rwzLI rwzRight"><button class="rwzButton rwzFinish" type="button"><span class="rwzText">Save & Finish</span></button></li><li class="rwzLI rwzRight"><button class="rwzButton rwzNext" type="button"><span class="rwzText">Next</span></button></li><li class="rwzLI rwzRight"><button class="rwzButton rwzPrevious" type="button"><span class="rwzText">Previous</span></button></li>
+		</ul>
+	</div><input id="ctl00_MainContent_RadWizard1_ClientState" name="ctl00_MainContent_RadWizard1_ClientState" type="hidden" />
+</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="demo-container size-custom">
+                    <div id="demo">
+                        <div class="RadDataForm rdfInlineBlock">
+                            <div class="rdfHeader ">
+                                <div class="rdfHeaderInner">Task Status</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rdfFieldset rdfBorders">
+                        <input type="hidden" name="ctl00$MainContent$hfStatusHeader" id="MainContent_hfStatusHeader" value="Pending" />
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-lg btn-default"><span id="" class=""></span>Pending</button>
+                            <button type="button" class="btn btn-lg btn-default"><span id="" class=""></span>In Progress</button>
+                            <button type="button" class="btn btn-lg btn-default"><span id="" class=""></span>Completed</button>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-minus"></span>
+                                <span class="lbl">Start Date : 
+                                    <span id="MainContent_txtStartDate">Not yet</span>
+                                </span></li>
+                            <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-minus"></span>
+                                <span class="lbl">Finish Date : 
+                                    <span id="MainContent_txtFinishDate">Not yet</span>
+                                </span></li>
+                            <li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-minus"></span>
+                                <span class="lbl">Deadline : 
+                                    <span id="MainContent_txtDeadline">2017/10/30</span>
+                                </span></li>
+                            <li id="translatorDoneHead" class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-minus"></span>
+                                <span class="lbl">Delay : 
+                                    <span id="MainContent_txtDelay">None</span><span id="MainContent_txtDays"></span>
+                                </span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+                </div>
+            </div>
+            
+            <div id="ctl00_UserProfile" style="display:none;position:absolute;">
+	
+               <div align="right">
+                 <img src="Images/photo-profile.png" alt="" />
+                <div class="content" align="left">
+                    <span> <b>Role: </b> <span id="lblRole">Translator</span></span>
+                     <span> <b>Email: </b> <span id="lblMail">hatimarqam@yahoo.com</span> </span>
+                                        
+                  
+                    <span class="addBtn">
+                        <span class="text">Skin</span>
+                        <div id="ctl00_SkinChooser" class="RadComboBox RadComboBox_Sunset">
+		<span class="rcbInner rcbReadOnly"><input name="ctl00$SkinChooser" type="text" class="rcbInput radPreventDecorate" id="ctl00_SkinChooser_Input" value="Sunset" readonly="readonly" /><button class="rcbActionButton" tabindex="-1" type="button"><span id="ctl00_SkinChooser_Arrow" class="t-font-icon t-i-arrow-down"></span><span class="rcbButtonText">select</span></button></span><div class="rcbSlide" style="z-index:6000;display:none;"><div id="ctl00_SkinChooser_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Sunset "><div class="rcbScroll rcbWidth"><ul class="rcbList"><li class="rcbItem">Black</li><li class="rcbItem">BlackMetroTouch</li><li class="rcbItem">Bootstrap</li><li class="rcbItem">Default</li><li class="rcbItem">Glow</li><li class="rcbItem">Material</li><li class="rcbItem">Metro</li><li class="rcbItem">MetroTouch</li><li class="rcbItem">Office2007</li><li class="rcbItem">Office2010Black</li><li class="rcbItem">Office2010Blue</li><li class="rcbItem">Office2010Silver</li><li class="rcbItem">Outlook</li><li class="rcbItem">Silk</li><li class="rcbItem">Simple</li><li class="rcbItem">Sunset</li><li class="rcbItem">Telerik</li><li class="rcbItem">Vista</li><li class="rcbItem">Web20</li><li class="rcbItem">WebBlue</li><li class="rcbItem">Windows7</li></ul></div></div></div><input id="ctl00_SkinChooser_ClientState" name="ctl00_SkinChooser_ClientState" type="hidden" />
+	</div>
+                    </span>
+                     <div   align="right">
+                    <button type="button" name="ctl00$BtnLogOut" value="Log Out" id="ctl00_BtnLogOut" class="RadButton RadButton_Sunset rbButton rbRounded rbLink rbIconButton"><span class="rbText">Log Out</span><input id="ctl00_BtnLogOut_ClientState" name="ctl00_BtnLogOut_ClientState" type="hidden" /></button>
+                </div> 
+
+                </div></div>
+            <input id="ctl00_UserProfile_ClientState" name="ctl00_UserProfile_ClientState" type="hidden" />
+</div>
+        </div>
+        <input type="hidden" name="ctl00$nav" id="nav" />
+
+        <script type="text/javascript">
+            var nav = $get("nav").value;
+
+            function pageLoad() {
+                if (nav === "mobile") {
+                    $itemMenu = $(".item.menu");
+
+                    $('.rmRootToggle').on("click", function () {
+                        var open = $itemMenu.hasClass("expanded");
+                        if (!open)
+                            $itemMenu.addClass("expanded");
+                        else
+                            $itemMenu.removeClass("expanded");
+                    });
+                }
+
+                $('.home-btn').on("click", function () {
+                    $('form').toggleClass('expandedSlider');
+                });
+
+                setNavigationsMinWidth();
+                initializeInteractions();
+            }
+
+            function initializeInteractions() {
+                $(".user").on("click", function (e) {
+                    toggleToolTip(e);
+                })
+
+                $(".searchBtn").on("click", function () {
+                    showSearch();
+                })
+            }
+
+            function setNavigationsMinWidth() {
+                $(".RadNavigation").each(function () {
+                    var navigation = $find($(this).attr("id"));
+                    navigation._minWidth = 0;
+                    navigation.repaint()
+                })
+            }
+
+            function toggleToolTip(e) {
+                var tooltip = $find("ctl00_UserProfile");
+
+                if (!tooltip.isVisible() == true) {
+                    var $node = $(e.currentTarget);
+                    var arrowPosition = $node.offset();
+
+                    tooltip.show();
+                    var popup = tooltip.get_popupElement();
+
+                    positionX = arrowPosition.left - $(popup).outerWidth(true) + $node.outerWidth(true) + 5;
+                    positionY = arrowPosition.top + $node.outerHeight(true) + 3;
+
+                    setTimeout(function () {
+                        $telerik.setLocation(popup, { x: positionX, y: positionY });
+                    }, 20)
+
+                    $("html").on("click", function (e) {
+                    })
+                }
+                else {
+                    tooltip.hide();
+                }
+            }
+
+            function showSearch() {
+                var search = $find($('div.RadSearchBox').attr('id'));
+                var $search = $(search.get_element());
+                var $searchInput = $search.find(".rsbInput");
+                $search.removeClass("hidden");
+                $searchInput.focus();
+
+                setTimeout(function () {
+                    search.repaint();
+
+                    $('html').on("click", function (e) {
+                        hideSearch(e, $search);
+                    });
+                }, 300);
+
+            }
+
+            function hideSearch(e, $search) {
+                var isSearchBoxClicked = $(e.target).parents(".RadSearchBox").length == 1;
+                var isSearchBoxItemClicked = $(e.target).parents(".rsbPopup").length == 1;
+
+                if (isSearchBoxClicked || isSearchBoxItemClicked) {
+                    return
+                }
+
+                $search.addClass("hidden");
+                $('html').off("click");
+            }
+        </script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_flow":0,"_renderMode":2,"_skin":"BlackMetroTouch","clientStateFieldID":"ctl00_verticalMenu_ClientState","collapseAnimation":"{\"duration\":450}","enableImageSprites":true,"expandAnimation":"{\"duration\":450}","itemData":[{"value":"HomeTR","navigateUrl":"DefaultTR.aspx","cssClass":"calendar"}]}, null, null, $get("ctl00_verticalMenu"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadNavigation, {"_renderMode":2,"_skin":"Sunset","clientStateFieldID":"ctl00_mainNavigation_ClientState","nodesData":[{"text":"Test Tr"}]}, null, null, $get("ctl00_mainNavigation"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadFormDecorator, {"_renderMode":2,"clientStateFieldID":"ctl00_RadFormDecorator2_ClientState","decoratedControls":65535,"decorationZoneID":"zoneMain","enabled":true,"skin":"Sunset"}, null, null, $get("ctl00_RadFormDecorator2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"_renderMode":2,"clientStateFieldID":"ctl00_MainContent_RadWindowManager1_ClientState","formID":"form1","iconUrl":"","minimizeIconUrl":"","name":"RadWindowManager1","skin":"Sunset","windowControls":"[]"}, null, null, $get("ctl00_MainContent_RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadFormDecorator, {"_renderMode":2,"clientStateFieldID":"ctl00_MainContent_RadFormDecorator3_ClientState","decoratedControls":65535,"decorationZoneID":"zoneTaskDetails","enabled":true,"skin":"Sunset"}, null, null, $get("ctl00_MainContent_RadFormDecorator3"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"Translation","_focused":false,"_initialValueAsText":"Translation","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$MainContent$txtJobType\\\u0027,\\\u0027\\\u0027)\", 0)","_renderMode":2,"_skin":"Sunset","_validationText":"Translation","clientStateFieldID":"ctl00_MainContent_txtJobType_ClientState","enabled":false,"styles":{HoveredStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riHover"],InvalidStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riError"],DisabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riDisabled"],FocusedStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riRead"],EnabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_MainContent_txtJobType"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"EN","_focused":false,"_initialValueAsText":"EN","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$MainContent$txtFromLangg\\\u0027,\\\u0027\\\u0027)\", 0)","_renderMode":2,"_skin":"Sunset","_validationText":"EN","clientStateFieldID":"ctl00_MainContent_txtFromLangg_ClientState","enabled":false,"styles":{HoveredStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riHover"],InvalidStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riError"],DisabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riDisabled"],FocusedStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riRead"],EnabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_MainContent_txtFromLangg"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"AR","_focused":false,"_initialValueAsText":"AR","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$MainContent$txtToLangg\\\u0027,\\\u0027\\\u0027)\", 0)","_renderMode":2,"_skin":"Sunset","_validationText":"AR","clientStateFieldID":"ctl00_MainContent_txtToLangg_ClientState","enabled":false,"styles":{HoveredStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riHover"],InvalidStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riError"],DisabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riDisabled"],FocusedStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riRead"],EnabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_MainContent_txtToLangg"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadNumericTextBox, {"_displayText":"25","_focused":false,"_initialValueAsText":"25","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$MainContent$txtwordCount\\\u0027,\\\u0027\\\u0027)\", 0)","_renderMode":2,"_skin":"Sunset","_validationText":"25","clientStateFieldID":"ctl00_MainContent_txtwordCount_ClientState","enabled":false,"incrementSettings":{InterceptArrowKeys:true,InterceptMouseWheel:true,Step:1},"minValue":0,"numberFormat":{"DecimalDigits":0,"DecimalSeparator":".","CultureNativeDecimalSeparator":".","GroupSeparator":",","GroupSizes":3,"NegativePattern":"-n","NegativeSign":"-","PositivePattern":"n","AllowRounding":true,"KeepNotRoundedValue":false,"KeepTrailingZerosOnFocus":false,"NumericPlaceHolder":"n"},"styles":{HoveredStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riHover"],InvalidStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riError"],DisabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riDisabled"],FocusedStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riRead"],EnabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEnabled"],NegativeStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riNegative"]}}, null, null, $get("ctl00_MainContent_txtwordCount"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"Test PM","_focused":false,"_initialValueAsText":"Test PM","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$MainContent$txtProjectManager\\\u0027,\\\u0027\\\u0027)\", 0)","_renderMode":2,"_skin":"Sunset","_validationText":"Test PM","clientStateFieldID":"ctl00_MainContent_txtProjectManager_ClientState","enabled":false,"styles":{HoveredStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riHover"],InvalidStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riError"],DisabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riDisabled"],FocusedStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riRead"],EnabledStyle: ["border-style:Outset;font-weight:bold;width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_MainContent_txtProjectManager"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTextBox, {"_displayText":"","_focused":false,"_initialValueAsText":"","_postBackEventReferenceScript":"setTimeout(\"__doPostBack(\\\u0027ctl00$MainContent$txtTaskDesc\\\u0027,\\\u0027\\\u0027)\", 0)","_renderMode":2,"_skin":"Sunset","_validationText":"","clientStateFieldID":"ctl00_MainContent_txtTaskDesc_ClientState","enabled":false,"styles":{HoveredStyle: ["border-style:Outset;width:100%;", "riTextBox riHover"],InvalidStyle: ["border-style:Outset;width:100%;", "riTextBox riError"],DisabledStyle: ["border-style:Outset;width:100%;", "riTextBox riDisabled"],FocusedStyle: ["border-style:Outset;width:100%;", "riTextBox riFocused"],EmptyMessageStyle: ["border-style:Outset;width:100%;", "riTextBox riEmpty"],ReadOnlyStyle: ["border-style:Outset;width:100%;", "riTextBox riRead"],EnabledStyle: ["border-style:Outset;width:100%;", "riTextBox riEnabled"]}}, null, null, $get("ctl00_MainContent_txtTaskDesc"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadButton, {"_accessKey":"","_hasIcon":true,"_hasImage":false,"_isClientSubmit":true,"_isImageButton":false,"_postBackReference":"__doPostBack('ctl00$MainContent$btnDownloadReceivedFile','')","_renderMode":2,"buttonType":1,"clientStateFieldID":"ctl00_MainContent_btnDownloadReceivedFile_ClientState","iconData":{"primaryCssClass":"rbDownload"},"imageData":{},"text":"TaskFile.backend.2017-09-26 (1).log","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"ctl00$MainContent$btnDownloadReceivedFile"}, null, null, $get("ctl00_MainContent_btnDownloadReceivedFile"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAsyncUpload, {"_accessKey":"","_chunkSize":2097152,"_disablePlugins":true,"_fileFilter":"{\"values\":[]}","_flashModuleUrl":"/WebResource.axd?d=f8kLMGFcxqpMmy9n4HPml2meFIZ3gv0p5hvHAZvzCaP-nHOSfqs1DWGFMFR9PLPZabBxp9aGq579kWyPIXT0M0W_FTy4AAMN_LQhFtocnr87SqywAp6EzVPBpihQRRulCwon14AjR8eb5HrjYFwaQj8Q8GUPlCt0C4Vs-F1zzbs1\u0026t=636430970607448931","_handlerUrl":"/Telerik.Web.UI.WebResource.axd?type=rau","_multipleFileSelection":1,"_pageGUID":"8eac66a9-d349-47cf-bd81-b887f80d2954","_progressHandlerUrl":"Telerik.RadUploadProgressHandler.ashx","_renderMode":2,"_serializedConfiguration":"ATTu5i4R+ViNFYO6kst0jC11wM/1iqH+W/isjhaDjNuCI7eJ/BY5d1E9eqZK27CJCMuon9u8/hgRIM/cTlgLlv4qOYjPBjs81Y3dAZAdtIr3TXiCmZi9M09a1BYMxjvGKfVky3b7PoOppeWS/3rglQFZUuf23fipS4FXBVy1iwHXlHPWJ4vAtmcg/1wzInltZ4I+ct1BpWJSMH7lXsIRR2vCL3zA5cGqamOX5FMd4z1istJwEX3722cs6QuC16xFs6XqRqR5YkjCW42wRE8Pga/u3Xp4IYMoUp3aLOo8dVpbRp/k1whYew4UZ6C2hhOGuMCeJYNjebT+ZUFNiSNXy0AeAtl+5pGaiBVR6wkPyCdaU67FH7Eihm7ncGrHIjxC0IViXpmfCKdPLAvpxqqMwyAQ3QzbzaX/up/WBAUdw+xe6DZOPZMEeDJJjlXuFMaoyykVTzsziQdmCm2375sudQNBLbLExi4yddTL9TC4zVG95ZsnM3rOnumHJBnJ1d3LqgbGOFgAn7wVkF9VOX4es9419c+8fNW7trqbqyQdk/zQPblTAT8vejEGupR8TckHcuiJsWp/lozyK+6Yee1+ojJqi7XAYWge42TIBg8qjDoO6A7r8yLuI4mvw14FZANI354CNt6UHg1fbeE8s/MlNGChJzTIXg/2DgVLCKov5WGyWnR39k2iSY5i7q6JhKYSLLZdfV1PlceJE/bGXjxAxornLOleebrFovx+z3svrMhk3lcVy3FyV0WxfY95gwnTlIE80fNaafzEewPEiatVIMBMbHWfQMwtGLSn22jGLKN4vZGY8vpWClx+yZ2kwcr3utc8+emsAt0dgvKJkOk5tFGYHUT15+HsdansTRDK389DpeaFzTfEuwTXMxz2d9ioejtlFqkgwLyVhV3vUg0lU2TZEAzO0iHLsA10/U+3+cOAGYPiJAe4umWO3EUmmV7rDKmbHXUeB8QMQ8MfJYnItpqymGIDUiWf/w7vgfI36HUeCuTDb5DgSUXBctZA1E9AIDy5qshn9GTkEMUC75KYdDtv4Qjjyv6PEktHBPLSHCOtUlJ6+SwyfF8JfOy0PFTdJtweJZF5K1LqgPvLQGUvEr+U1RixYmoNl1t2OkzbZvwKI2ms4c0vxO2zA9tCvhckx93T+eW5p4RRoruZrQ4qut/o+Mk2W8XddqwNaPYGy54xbYo9dfa57ecz78lWslcl/oI7vZrdzCX2b/xxcZ/9jbolE5p5TLOeaHZ8jeIV592u0ypiRBx2nVG9SDCzppYpKSeCv7NlmNdbJFzEzxLMSvB8jYVKR57Q9my+4f1ApiYeMaTNAD0OUnHNyydsHpbwdqSkYyg/TMEDCz4hW+2Fb6YOMsOIxS7VdCN+i51U1724LwbYev+0GLqvhwshzelgCpn+QsFDOzVLVOzzfsEiwVB9HKS8GxPVZFvKssKyb9Rx5ct/s3bGja0sGv9INNi91L+NEUYL287tQaogjxI7RN3a6Xd3db0IiL5GbmVR6ht0spwnwwiK1Tu4QG2gnQymemnfEeXX4Ilsu0qBy6ddAA==","_serializedConfigurationType":"6R/cGaqQeHVAzdJ9wTFOyCsrMSTtqcjLe8AHwiPckPDUwecnJyNlkDYwDQpxGYQ9hs6YxhupK310sbCbtXB4H6Dz5rGNL40nkkyo4j2clmRr08jtFsPQ0RpE5BGsulPT3l0MxyAvPFMs8bMybUyAP+9RB9LoHE3Xo8BqDadX3HRG7tI8ZK3lv8Y4CZHY74s5NMH6jk/OtxaYjQrL9bnXx4tU50Iy4HCISIgaZRRw1uJPUCTq+pHNHoZJY0/sXj8N3bT1N41peO9gQYQv2nr5VBoGxjlHF3K8BNU5AwW4/0DD2tkzBs0gar+MmlrwrPcxvdWaG++a3pGBYPiWeSORIMTgRLcqXDhUshn1y/QWvao=","_silverlightModuleUrl":"/WebResource.axd?d=rOhlLWbeN2T1a2pTojNjqPqtip010HofG_NGJtBK9lZxzy0rIrnfw46CH12Y11lTpEZHx8AUkNjA3UklrIMcGbikIK7w5QVSV7XyVUzZZ1SHgKzBw9VbJZRyoeVvFjyKIU3yk4yy5IxgZ--ex2GfhjKDpMiV8RQbMDyNI7yKMcAaTBjGwRsMCuSWhRYyjlvQ0\u0026t=636430970607448931","_skin":"Sunset","_tabIndex":0,"allowedFileExtensions":"[]","clientStateFieldID":"ctl00_MainContent_uploadFinishedFile_ClientState","dropZones":"[]","localization":{"Select":"Select","Remove":"Remove","Cancel":"Cancel","DropZone":"Drop files here"},"maxFileCount":1}, null, null, $get("ctl00_MainContent_uploadFinishedFile"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadButton, {"_accessKey":"","_hasIcon":true,"_hasImage":false,"_isClientSubmit":false,"_isImageButton":false,"_postBackReference":"","_renderMode":2,"clientStateFieldID":"ctl00_MainContent_btnSendTask_ClientState","enabled":false,"iconData":{"primaryCssClass":"rbMail"},"imageData":{},"text":"Send Email","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"ctl00$MainContent$btnSendTask"}, null, null, $get("ctl00_MainContent_btnSendTask"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadButton, {"_accessKey":"","_hasIcon":true,"_hasImage":false,"_isClientSubmit":true,"_isImageButton":false,"_postBackReference":"__doPostBack('ctl00$MainContent$btnDownloadFinishedFile','')","_renderMode":2,"buttonType":1,"clientStateFieldID":"ctl00_MainContent_btnDownloadFinishedFile_ClientState","enabled":false,"iconData":{"primaryCssClass":"rbDownload"},"imageData":{},"text":"Download","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"ctl00$MainContent$btnDownloadFinishedFile"}, null, null, $get("ctl00_MainContent_btnDownloadFinishedFile"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWizard, {"_activeIndex":1,"_finishPostBack":"__doPostBack(\u0027ctl00$MainContent$RadWizard1\u0027,\u0027arguments\u0027)","_progressPercent":100,"_renderMode":2,"clientStateFieldID":"ctl00_MainContent_RadWizard1_ClientState","wizardStepData":[{"id":"MainContent_stepBasic","validationGroup":"basicInfo","stepType":3},{"id":"MainContent_stepFiles","validationGroup":"FilesInfo","stepType":2}]}, {"buttonClicking":OnClientButtonClicking,"load":OnClientLoad}, null, $get("ctl00_MainContent_RadWizard1"));
+});
+
+WebForm_InitCallback();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownWidth":0,"_height":0,"_postBackReference":"__doPostBack(\u0027ctl00$SkinChooser\u0027,\u0027arguments\u0027)","_renderMode":2,"_skin":"Sunset","_text":"Sunset","_uniqueId":"ctl00$SkinChooser","_value":"Sunset","clientStateFieldID":"ctl00_SkinChooser_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"value":"Black"},{"value":"BlackMetroTouch"},{"value":"Bootstrap"},{"value":"Default"},{"value":"Glow"},{"value":"Material"},{"value":"Metro"},{"value":"MetroTouch"},{"value":"Office2007"},{"value":"Office2010Black"},{"value":"Office2010Blue"},{"value":"Office2010Silver"},{"value":"Outlook"},{"value":"Silk"},{"value":"Simple"},{"value":"Sunset","selected":true},{"value":"Telerik"},{"value":"Vista"},{"value":"Web20"},{"value":"WebBlue"},{"value":"Windows7"}],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}","selectedIndex":15}, null, null, $get("ctl00_SkinChooser"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadButton, {"_accessKey":"","_causesValidation":false,"_hasIcon":false,"_hasImage":false,"_isClientSubmit":true,"_isImageButton":false,"_postBackReference":"__doPostBack('ctl00$BtnLogOut','')","_renderMode":2,"buttonType":1,"clientStateFieldID":"ctl00_BtnLogOut_ClientState","iconData":{},"imageData":{},"text":"Log Out","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"ctl00$BtnLogOut"}, null, null, $get("ctl00_BtnLogOut"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","_renderMode":2,"clientStateFieldID":"ctl00_UserProfile_ClientState","formID":"form1","hideEvent":16,"skin":"Sunset","targetControlID":"aa"}, null, null, $get("ctl00_UserProfile"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

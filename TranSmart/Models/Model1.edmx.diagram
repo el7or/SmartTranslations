@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac6520ebfff34b3d824953e03c7cfd68" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Employee" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Item" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValCity" Width="1.5" PointX="5.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValCountry" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValCustomerType" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValEmployeeRole" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValEmployeeWorkMethod" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValLanguage" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ValState" Width="1.5" PointX="3" PointY="19.875" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Customers_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Customers_ValCustomerTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Employees_ValEmployeeRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Employees_ValEmployeeWorkMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_CityMaster_StateMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_StateMaster_CountryMaster" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.Project" Width="1.5" PointX="5.25" PointY="9.25" />
+        <AssociationConnector Association="Model.FK_Projects_Customers" />
+        <AssociationConnector Association="Model.FK_Projects_Employees" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="8.25" PointY="10.625" />
+        <AssociationConnector Association="Model.FK_Users_Customers" />
+        <AssociationConnector Association="Model.FK_Users_Employees" />
+        <EntityTypeShape EntityType="Model.ProjectTask" Width="1.5" PointX="10.5" PointY="12.375" />
+        <AssociationConnector Association="Model.FK_ProjectTasks_Employees" />
+        <AssociationConnector Association="Model.FK_ProjectTasks_Employees2" />
+        <AssociationConnector Association="Model.FK_ProjectTasks_Projects" />
+        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="7.5" PointY="16.125" />
+        <AssociationConnector Association="Model.FK_Payments_Projects1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

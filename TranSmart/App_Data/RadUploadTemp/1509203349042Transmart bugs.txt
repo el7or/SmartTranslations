@@ -1,0 +1,7 @@
+Offer step in Project details need to be loaded at server and updated at client
+Send Offer to customer should be tested
+
+ProjectTasksDetails Debuging
+Reports printing
+
+Full cycle

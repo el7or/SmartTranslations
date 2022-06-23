@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CustomerTypeID" Type="int" Nullable="false" />
+          <Property Name="CustomerEmail" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CustomerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerCountryID" Type="int" />
+          <Property Name="CustomerAddress" Type="nvarchar(max)" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EditedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="JobStartDate" Type="date" Nullable="false" />
+          <Property Name="WorkMethodID" Type="int" Nullable="false" />
+          <Property Name="Languages" Type="nvarchar(max)" />
+          <Property Name="WordPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BasicSalary" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Commission" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="IsActivated" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EditedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ItemType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ItemDescription" Type="nvarchar(max)" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EditedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectID" Type="uniqueidentifier" />
+          <Property Name="Item" Type="nvarchar(max)" />
+          <Property Name="PaymentDirection" Type="bit" Nullable="false" />
+          <Property Name="Paid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="NextPaymentDate" Type="datetime" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CustomerID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ManagerID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectSerial" Type="int" StoreGeneratedPattern="None" Nullable="false" />
+          <Property Name="ProjectTitle" Type="nvarchar(max)" />
+          <Property Name="ProjectStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CustomerRequestDate" Type="datetime" Nullable="false" />
+          <Property Name="CustomerFile" Type="nvarchar(max)" />
+          <Property Name="SourceLangg" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TargetLangg" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WordCount" Type="bigint" Nullable="false" />
+          <Property Name="WordPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="VatValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="DiscountValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="isOfferSentToCustomer" Type="datetime" />
+          <Property Name="isCustomerApproved" Type="datetime" />
+          <Property Name="PromiseDeliveryDate" Type="datetime" />
+          <Property Name="FinalFile" Type="nvarchar(max)" />
+          <Property Name="ActualDeliveryDate" Type="datetime" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="IsActivated" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EditedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProjectTasks">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProjectID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TranslatorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ReviewerID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TaskSerial" Type="int" Nullable="false" />
+          <Property Name="TaskStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TaskFile" Type="nvarchar(max)" />
+          <Property Name="TaskDescription" Type="nvarchar(max)" />
+          <Property Name="WordCount" Type="bigint" Nullable="false" />
+          <Property Name="TranslatorWordPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TranslatorDeadLine" Type="datetime" Nullable="false" />
+          <Property Name="isMailSentToTranslator" Type="datetime" />
+          <Property Name="isTranslatorReceived" Type="datetime" />
+          <Property Name="isTranslatorProgress" Type="datetime" />
+          <Property Name="isTranslatorDone" Type="datetime" />
+          <Property Name="TranslatorFile" Type="nvarchar(max)" />
+          <Property Name="TranslatorNote" Type="nvarchar(max)" />
+          <Property Name="TranslatorQuality" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="TranslatorDelay" Type="int" />
+          <Property Name="ReviewerWordPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="ReviewerDeadLine" Type="datetime" Nullable="false" />
+          <Property Name="isMailSentToReviewer" Type="datetime" />
+          <Property Name="isReviewerReceived" Type="datetime" />
+          <Property Name="isReviewerProgress" Type="datetime" />
+          <Property Name="isReviewerDone" Type="datetime" />
+          <Property Name="ReviewerFile" Type="nvarchar(max)" />
+          <Property Name="ReviewerNote" Type="nchar" MaxLength="10" />
+          <Property Name="ReviewerQuality" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="ReviewerDelay" Type="int" />
+          <Property Name="IsActivated" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EditedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EmployeeID" Type="uniqueidentifier" />
+          <Property Name="CustomerID" Type="uniqueidentifier" />
+          <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsActivated" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="AlertProject" Type="int" />
+          <Property Name="AlertTask" Type="int" />
+          <Property Name="AlertPayment" Type="int" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="EditedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValCities">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityText" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateID" Type="int" />
+        </EntityType>
+        <EntityType Name="ValCountries">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryText" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="ValCustomerTypes">
+          <Key>
+            <PropertyRef Name="CustomerTypeID" />
+          </Key>
+          <Property Name="CustomerTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerTypeText" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValEmployeeRoles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="RoleText" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValEmployeeWorkMethods">
+          <Key>
+            <PropertyRef Name="WorkMethodID" />
+          </Key>
+          <Property Name="WorkMethodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkMethodText" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValLanguages">
+          <Key>
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="LanguageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LanguageText" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValStates">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateText" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryID" Type="int" />
+        </EntityType>
+        <Association Name="FK_CityMaster_StateMaster">
+          <End Role="ValStates" Type="Self.ValStates" Multiplicity="0..1" />
+          <End Role="ValCities" Type="Self.ValCities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValStates">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="ValCities">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customers_Countries">
+          <End Role="ValCountries" Type="Self.ValCountries" Multiplicity="0..1" />
+          <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValCountries">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="CustomerCountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customers_ValCustomerTypes">
+          <End Role="ValCustomerTypes" Type="Self.ValCustomerTypes" Multiplicity="1" />
+          <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValCustomerTypes">
+              <PropertyRef Name="CustomerTypeID" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="CustomerTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employees_ValEmployeeRoles">
+          <End Role="ValEmployeeRoles" Type="Self.ValEmployeeRoles" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValEmployeeRoles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employees_ValEmployeeWorkMethods">
+          <End Role="ValEmployeeWorkMethods" Type="Self.ValEmployeeWorkMethods" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValEmployeeWorkMethods">
+              <PropertyRef Name="WorkMethodID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="WorkMethodID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Projects1">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+          <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Projects_Customers">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Projects" Type="Self.Projects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Projects">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Projects_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Projects" Type="Self.Projects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Projects">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjectTasks_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="ProjectTasks" Type="Self.ProjectTasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ProjectTasks">
+              <PropertyRef Name="ReviewerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjectTasks_Employees2">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="ProjectTasks" Type="Self.ProjectTasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ProjectTasks">
+              <PropertyRef Name="TranslatorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjectTasks_Projects">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+          <End Role="ProjectTasks" Type="Self.ProjectTasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="ProjectTasks">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StateMaster_CountryMaster">
+          <End Role="ValCountries" Type="Self.ValCountries" Multiplicity="0..1" />
+          <End Role="ValStates" Type="Self.ValStates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValCountries">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="ValStates">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Customers">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectTasks" EntityType="Self.ProjectTasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValCities" EntityType="Self.ValCities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValCountries" EntityType="Self.ValCountries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValCustomerTypes" EntityType="Self.ValCustomerTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValEmployeeRoles" EntityType="Self.ValEmployeeRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValEmployeeWorkMethods" EntityType="Self.ValEmployeeWorkMethods" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValLanguages" EntityType="Self.ValLanguages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ValStates" EntityType="Self.ValStates" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CityMaster_StateMaster" Association="Self.FK_CityMaster_StateMaster">
+            <End Role="ValStates" EntitySet="ValStates" />
+            <End Role="ValCities" EntitySet="ValCities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customers_Countries" Association="Self.FK_Customers_Countries">
+            <End Role="ValCountries" EntitySet="ValCountries" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customers_ValCustomerTypes" Association="Self.FK_Customers_ValCustomerTypes">
+            <End Role="ValCustomerTypes" EntitySet="ValCustomerTypes" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employees_ValEmployeeRoles" Association="Self.FK_Employees_ValEmployeeRoles">
+            <End Role="ValEmployeeRoles" EntitySet="ValEmployeeRoles" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employees_ValEmployeeWorkMethods" Association="Self.FK_Employees_ValEmployeeWorkMethods">
+            <End Role="ValEmployeeWorkMethods" EntitySet="ValEmployeeWorkMethods" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Projects1" Association="Self.FK_Payments_Projects1">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Projects_Customers" Association="Self.FK_Projects_Customers">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Projects" EntitySet="Projects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Projects_Employees" Association="Self.FK_Projects_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Projects" EntitySet="Projects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjectTasks_Employees" Association="Self.FK_ProjectTasks_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ProjectTasks" EntitySet="ProjectTasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjectTasks_Employees2" Association="Self.FK_ProjectTasks_Employees2">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="ProjectTasks" EntitySet="ProjectTasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjectTasks_Projects" Association="Self.FK_ProjectTasks_Projects">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="ProjectTasks" EntitySet="ProjectTasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StateMaster_CountryMaster" Association="Self.FK_StateMaster_CountryMaster">
+            <End Role="ValCountries" EntitySet="ValCountries" />
+            <End Role="ValStates" EntitySet="ValStates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Customers" Association="Self.FK_Users_Customers">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Employees" Association="Self.FK_Users_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Guid" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerTypeID" Type="Int32" Nullable="false" />
+          <Property Name="CustomerEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCountryID" Type="Int32" />
+          <Property Name="CustomerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EditedBy" Type="Guid" Nullable="false" />
+          <Property Name="EditedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ValCountry" Relationship="Self.FK_Customers_Countries" FromRole="Customers" ToRole="ValCountries" />
+          <NavigationProperty Name="ValCustomerType" Relationship="Self.FK_Customers_ValCustomerTypes" FromRole="Customers" ToRole="ValCustomerTypes" />
+          <NavigationProperty Name="Projects" Relationship="Model.FK_Projects_Customers" FromRole="Customer" ToRole="Project" />
+          <NavigationProperty Name="Users" Relationship="Model.FK_Users_Customers" FromRole="Customer" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Guid" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="JobStartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="WorkMethodID" Type="Int32" Nullable="false" />
+          <Property Name="Languages" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WordPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BasicSalary" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Commission" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActivated" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EditedBy" Type="Guid" Nullable="false" />
+          <Property Name="EditedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ValEmployeeRole" Relationship="Self.FK_Employees_ValEmployeeRoles" FromRole="Employees" ToRole="ValEmployeeRoles" />
+          <NavigationProperty Name="ValEmployeeWorkMethod" Relationship="Self.FK_Employees_ValEmployeeWorkMethods" FromRole="Employees" ToRole="ValEmployeeWorkMethods" />
+          <NavigationProperty Name="Projects" Relationship="Model.FK_Projects_Employees" FromRole="Employee" ToRole="Project" />
+          <NavigationProperty Name="Users" Relationship="Model.FK_Users_Employees" FromRole="Employee" ToRole="User" />
+          <NavigationProperty Name="ProjectTasks" Relationship="Model.FK_ProjectTasks_Employees" FromRole="Employee" ToRole="ProjectTask" />
+          <NavigationProperty Name="ProjectTasks1" Relationship="Model.FK_ProjectTasks_Employees2" FromRole="Employee" ToRole="ProjectTask" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Guid" Nullable="false" />
+          <Property Name="ItemType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ItemDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EditedBy" Type="Guid" Nullable="false" />
+          <Property Name="EditedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ValCity">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StateID" Type="Int32" />
+          <NavigationProperty Name="ValState" Relationship="Self.FK_CityMaster_StateMaster" FromRole="ValCities" ToRole="ValStates" />
+        </EntityType>
+        <EntityType Name="ValCountry">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_Countries" FromRole="ValCountries" ToRole="Customers" />
+          <NavigationProperty Name="ValStates" Relationship="Self.FK_StateMaster_CountryMaster" FromRole="ValCountries" ToRole="ValStates" />
+        </EntityType>
+        <EntityType Name="ValCustomerType">
+          <Key>
+            <PropertyRef Name="CustomerTypeID" />
+          </Key>
+          <Property Name="CustomerTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerTypeText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_ValCustomerTypes" FromRole="ValCustomerTypes" ToRole="Customers" />
+        </EntityType>
+        <EntityType Name="ValEmployeeRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="RoleText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_ValEmployeeRoles" FromRole="ValEmployeeRoles" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="ValEmployeeWorkMethod">
+          <Key>
+            <PropertyRef Name="WorkMethodID" />
+          </Key>
+          <Property Name="WorkMethodID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkMethodText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_ValEmployeeWorkMethods" FromRole="ValEmployeeWorkMethods" ToRole="Employees" />
+        </EntityType>
+        <EntityType Name="ValLanguage">
+          <Key>
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="LanguageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LanguageText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ValState">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryID" Type="Int32" />
+          <NavigationProperty Name="ValCities" Relationship="Self.FK_CityMaster_StateMaster" FromRole="ValStates" ToRole="ValCities" />
+          <NavigationProperty Name="ValCountry" Relationship="Self.FK_StateMaster_CountryMaster" FromRole="ValStates" ToRole="ValCountries" />
+        </EntityType>
+        <Association Name="FK_Customers_Countries">
+          <End Role="ValCountries" Type="Self.ValCountry" Multiplicity="0..1" />
+          <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValCountries">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="CustomerCountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Customers_ValCustomerTypes">
+          <End Role="ValCustomerTypes" Type="Self.ValCustomerType" Multiplicity="1" />
+          <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValCustomerTypes">
+              <PropertyRef Name="CustomerTypeID" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="CustomerTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employees_ValEmployeeRoles">
+          <End Role="ValEmployeeRoles" Type="Self.ValEmployeeRole" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValEmployeeRoles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employees_ValEmployeeWorkMethods">
+          <End Role="ValEmployeeWorkMethods" Type="Self.ValEmployeeWorkMethod" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValEmployeeWorkMethods">
+              <PropertyRef Name="WorkMethodID" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="WorkMethodID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityMaster_StateMaster">
+          <End Role="ValStates" Type="Self.ValState" Multiplicity="0..1" />
+          <End Role="ValCities" Type="Self.ValCity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValStates">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="ValCities">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StateMaster_CountryMaster">
+          <End Role="ValCountries" Type="Self.ValCountry" Multiplicity="0..1" />
+          <End Role="ValStates" Type="Self.ValState" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ValCountries">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="ValStates">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TranSmartDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Items" EntityType="Self.Item" />
+          <EntitySet Name="ValCities" EntityType="Self.ValCity" />
+          <EntitySet Name="ValCountries" EntityType="Self.ValCountry" />
+          <EntitySet Name="ValCustomerTypes" EntityType="Self.ValCustomerType" />
+          <EntitySet Name="ValEmployeeRoles" EntityType="Self.ValEmployeeRole" />
+          <EntitySet Name="ValEmployeeWorkMethods" EntityType="Self.ValEmployeeWorkMethod" />
+          <EntitySet Name="ValLanguages" EntityType="Self.ValLanguage" />
+          <EntitySet Name="ValStates" EntityType="Self.ValState" />
+          <AssociationSet Name="FK_Customers_Countries" Association="Self.FK_Customers_Countries">
+            <End Role="ValCountries" EntitySet="ValCountries" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Customers_ValCustomerTypes" Association="Self.FK_Customers_ValCustomerTypes">
+            <End Role="ValCustomerTypes" EntitySet="ValCustomerTypes" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employees_ValEmployeeRoles" Association="Self.FK_Employees_ValEmployeeRoles">
+            <End Role="ValEmployeeRoles" EntitySet="ValEmployeeRoles" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employees_ValEmployeeWorkMethods" Association="Self.FK_Employees_ValEmployeeWorkMethods">
+            <End Role="ValEmployeeWorkMethods" EntitySet="ValEmployeeWorkMethods" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityMaster_StateMaster" Association="Self.FK_CityMaster_StateMaster">
+            <End Role="ValStates" EntitySet="ValStates" />
+            <End Role="ValCities" EntitySet="ValCities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StateMaster_CountryMaster" Association="Self.FK_StateMaster_CountryMaster">
+            <End Role="ValCountries" EntitySet="ValCountries" />
+            <End Role="ValStates" EntitySet="ValStates" />
+          </AssociationSet>
+          <EntitySet Name="Projects" EntityType="Model.Project" />
+          <AssociationSet Name="FK_Projects_Customers" Association="Model.FK_Projects_Customers">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Project" EntitySet="Projects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Projects_Employees" Association="Model.FK_Projects_Employees">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Project" EntitySet="Projects" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="Model.User" />
+          <AssociationSet Name="FK_Users_Customers" Association="Model.FK_Users_Customers">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Employees" Association="Model.FK_Users_Employees">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="ProjectTasks" EntityType="Model.ProjectTask" />
+          <AssociationSet Name="FK_ProjectTasks_Employees" Association="Model.FK_ProjectTasks_Employees">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="ProjectTask" EntitySet="ProjectTasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjectTasks_Employees2" Association="Model.FK_ProjectTasks_Employees2">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="ProjectTask" EntitySet="ProjectTasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProjectTasks_Projects" Association="Model.FK_ProjectTasks_Projects">
+            <End Role="Project" EntitySet="Projects" />
+            <End Role="ProjectTask" EntitySet="ProjectTasks" />
+          </AssociationSet>
+          <EntitySet Name="Payments" EntityType="Model.Payment" />
+          <AssociationSet Name="FK_Payments_Projects1" Association="Model.FK_Payments_Projects1">
+            <End Role="Project" EntitySet="Projects" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Guid" Nullable="false" />
+          <Property Name="CustomerID" Type="Guid" Nullable="false" />
+          <Property Name="ManagerID" Type="Guid" Nullable="false" />
+          <Property Name="ProjectSerial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="ProjectTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerRequestDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CustomerFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SourceLangg" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TargetLangg" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WordCount" Type="Int64" Nullable="false" />
+          <Property Name="WordPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="VatValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="DiscountValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="isOfferSentToCustomer" Type="DateTime" Precision="3" />
+          <Property Name="isCustomerApproved" Type="DateTime" Precision="3" />
+          <Property Name="PromiseDeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="FinalFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ActualDeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActivated" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EditedBy" Type="Guid" Nullable="false" />
+          <Property Name="EditedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Projects_Customers" FromRole="Project" ToRole="Customer" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_Projects_Employees" FromRole="Project" ToRole="Employee" />
+          <NavigationProperty Name="ProjectTasks" Relationship="Model.FK_ProjectTasks_Projects" FromRole="Project" ToRole="ProjectTask" />
+          <NavigationProperty Name="Payments" Relationship="Model.FK_Payments_Projects1" FromRole="Project" ToRole="Payment" />
+        </EntityType>
+        <Association Name="FK_Projects_Customers">
+          <End Type="Model.Customer" Role="Customer" Multiplicity="1" />
+          <End Type="Model.Project" Role="Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Projects_Employees">
+          <End Type="Model.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Model.Project" Role="Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="ManagerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Guid" Nullable="false" />
+          <Property Name="EmployeeID" Type="Guid" />
+          <Property Name="CustomerID" Type="Guid" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActivated" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="AlertProject" Type="Int32" />
+          <Property Name="AlertTask" Type="Int32" />
+          <Property Name="AlertPayment" Type="Int32" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EditedBy" Type="Guid" Nullable="false" />
+          <Property Name="EditedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="Model.FK_Users_Customers" FromRole="User" ToRole="Customer" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_Users_Employees" FromRole="User" ToRole="Employee" />
+        </EntityType>
+        <Association Name="FK_Users_Customers">
+          <End Type="Model.Customer" Role="Customer" Multiplicity="0..1" />
+          <End Type="Model.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Employees">
+          <End Type="Model.Employee" Role="Employee" Multiplicity="0..1" />
+          <End Type="Model.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProjectTask">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="Guid" Nullable="false" />
+          <Property Name="ProjectID" Type="Guid" Nullable="false" />
+          <Property Name="TranslatorID" Type="Guid" Nullable="false" />
+          <Property Name="ReviewerID" Type="Guid" Nullable="false" />
+          <Property Name="TaskSerial" Type="Int32" Nullable="false" />
+          <Property Name="TaskStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TaskFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaskDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WordCount" Type="Int64" Nullable="false" />
+          <Property Name="TranslatorWordPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TranslatorDeadLine" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isMailSentToTranslator" Type="DateTime" Precision="3" />
+          <Property Name="isTranslatorReceived" Type="DateTime" Precision="3" />
+          <Property Name="isTranslatorProgress" Type="DateTime" Precision="3" />
+          <Property Name="isTranslatorDone" Type="DateTime" Precision="3" />
+          <Property Name="TranslatorFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TranslatorNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TranslatorQuality" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TranslatorDelay" Type="Int32" />
+          <Property Name="ReviewerWordPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="ReviewerDeadLine" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isMailSentToReviewer" Type="DateTime" Precision="3" />
+          <Property Name="isReviewerReceived" Type="DateTime" Precision="3" />
+          <Property Name="isReviewerProgress" Type="DateTime" Precision="3" />
+          <Property Name="isReviewerDone" Type="DateTime" Precision="3" />
+          <Property Name="ReviewerFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReviewerNote" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ReviewerQuality" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ReviewerDelay" Type="Int32" />
+          <Property Name="IsActivated" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EditedBy" Type="Guid" Nullable="false" />
+          <Property Name="EditedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Employee" Relationship="Model.FK_ProjectTasks_Employees" FromRole="ProjectTask" ToRole="Employee" />
+          <NavigationProperty Name="Employee1" Relationship="Model.FK_ProjectTasks_Employees2" FromRole="ProjectTask" ToRole="Employee" />
+          <NavigationProperty Name="Project" Relationship="Model.FK_ProjectTasks_Projects" FromRole="ProjectTask" ToRole="Project" />
+        </EntityType>
+        <Association Name="FK_ProjectTasks_Employees">
+          <End Type="Model.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Model.ProjectTask" Role="ProjectTask" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ProjectTask">
+              <PropertyRef Name="ReviewerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjectTasks_Employees2">
+          <End Type="Model.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Model.ProjectTask" Role="ProjectTask" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="ProjectTask">
+              <PropertyRef Name="TranslatorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProjectTasks_Projects">
+          <End Type="Model.Project" Role="Project" Multiplicity="1" />
+          <End Type="Model.ProjectTask" Role="ProjectTask" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="ProjectTask">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="Guid" Nullable="false" />
+          <Property Name="ProjectID" Type="Guid" />
+          <Property Name="Item" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentDirection" Type="Boolean" Nullable="false" />
+          <Property Name="Paid" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="NextPaymentDate" Type="DateTime" Precision="3" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Project" Relationship="Model.FK_Payments_Projects1" FromRole="Payment" ToRole="Project" />
+        </EntityType>
+        <Association Name="FK_Payments_Projects1">
+          <End Type="Model.Project" Role="Project" Multiplicity="0..1" />
+          <End Type="Model.Payment" Role="Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="ProjectID" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="TranSmartDBContext">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="Model.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+                <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+                <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+                <ScalarProperty Name="CustomerCountryID" ColumnName="CustomerCountryID" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Model.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="JobStartDate" ColumnName="JobStartDate" />
+                <ScalarProperty Name="WorkMethodID" ColumnName="WorkMethodID" />
+                <ScalarProperty Name="Languages" ColumnName="Languages" />
+                <ScalarProperty Name="WordPrice" ColumnName="WordPrice" />
+                <ScalarProperty Name="BasicSalary" ColumnName="BasicSalary" />
+                <ScalarProperty Name="Commission" ColumnName="Commission" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="Model.Item">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+                <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValCities">
+            <EntityTypeMapping TypeName="Model.ValCity">
+              <MappingFragment StoreEntitySet="ValCities">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityText" ColumnName="CityText" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValCountries">
+            <EntityTypeMapping TypeName="Model.ValCountry">
+              <MappingFragment StoreEntitySet="ValCountries">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CountryText" ColumnName="CountryText" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValCustomerTypes">
+            <EntityTypeMapping TypeName="Model.ValCustomerType">
+              <MappingFragment StoreEntitySet="ValCustomerTypes">
+                <ScalarProperty Name="CustomerTypeID" ColumnName="CustomerTypeID" />
+                <ScalarProperty Name="CustomerTypeText" ColumnName="CustomerTypeText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValEmployeeRoles">
+            <EntityTypeMapping TypeName="Model.ValEmployeeRole">
+              <MappingFragment StoreEntitySet="ValEmployeeRoles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleText" ColumnName="RoleText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValEmployeeWorkMethods">
+            <EntityTypeMapping TypeName="Model.ValEmployeeWorkMethod">
+              <MappingFragment StoreEntitySet="ValEmployeeWorkMethods">
+                <ScalarProperty Name="WorkMethodID" ColumnName="WorkMethodID" />
+                <ScalarProperty Name="WorkMethodText" ColumnName="WorkMethodText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValLanguages">
+            <EntityTypeMapping TypeName="Model.ValLanguage">
+              <MappingFragment StoreEntitySet="ValLanguages">
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="LanguageText" ColumnName="LanguageText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ValStates">
+            <EntityTypeMapping TypeName="Model.ValState">
+              <MappingFragment StoreEntitySet="ValStates">
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateText" ColumnName="StateText" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="Model.Project">
+              <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="ActualDeliveryDate" ColumnName="ActualDeliveryDate" />
+                <ScalarProperty Name="FinalFile" ColumnName="FinalFile" />
+                <ScalarProperty Name="PromiseDeliveryDate" ColumnName="PromiseDeliveryDate" />
+                <ScalarProperty Name="isCustomerApproved" ColumnName="isCustomerApproved" />
+                <ScalarProperty Name="isOfferSentToCustomer" ColumnName="isOfferSentToCustomer" />
+                <ScalarProperty Name="DiscountValue" ColumnName="DiscountValue" />
+                <ScalarProperty Name="VatValue" ColumnName="VatValue" />
+                <ScalarProperty Name="WordPrice" ColumnName="WordPrice" />
+                <ScalarProperty Name="WordCount" ColumnName="WordCount" />
+                <ScalarProperty Name="TargetLangg" ColumnName="TargetLangg" />
+                <ScalarProperty Name="SourceLangg" ColumnName="SourceLangg" />
+                <ScalarProperty Name="CustomerFile" ColumnName="CustomerFile" />
+                <ScalarProperty Name="CustomerRequestDate" ColumnName="CustomerRequestDate" />
+                <ScalarProperty Name="ProjectStatus" ColumnName="ProjectStatus" />
+                <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+                <ScalarProperty Name="ProjectSerial" ColumnName="ProjectSerial" />
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Model.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="AlertPayment" ColumnName="AlertPayment" />
+                <ScalarProperty Name="AlertTask" ColumnName="AlertTask" />
+                <ScalarProperty Name="AlertProject" ColumnName="AlertProject" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectTasks">
+            <EntityTypeMapping TypeName="Model.ProjectTask">
+              <MappingFragment StoreEntitySet="ProjectTasks">
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IsActivated" ColumnName="IsActivated" />
+                <ScalarProperty Name="ReviewerDelay" ColumnName="ReviewerDelay" />
+                <ScalarProperty Name="ReviewerQuality" ColumnName="ReviewerQuality" />
+                <ScalarProperty Name="ReviewerNote" ColumnName="ReviewerNote" />
+                <ScalarProperty Name="ReviewerFile" ColumnName="ReviewerFile" />
+                <ScalarProperty Name="isReviewerDone" ColumnName="isReviewerDone" />
+                <ScalarProperty Name="isReviewerProgress" ColumnName="isReviewerProgress" />
+                <ScalarProperty Name="isReviewerReceived" ColumnName="isReviewerReceived" />
+                <ScalarProperty Name="isMailSentToReviewer" ColumnName="isMailSentToReviewer" />
+                <ScalarProperty Name="ReviewerDeadLine" ColumnName="ReviewerDeadLine" />
+                <ScalarProperty Name="ReviewerWordPrice" ColumnName="ReviewerWordPrice" />
+                <ScalarProperty Name="TranslatorDelay" ColumnName="TranslatorDelay" />
+                <ScalarProperty Name="TranslatorQuality" ColumnName="TranslatorQuality" />
+                <ScalarProperty Name="TranslatorNote" ColumnName="TranslatorNote" />
+                <ScalarProperty Name="TranslatorFile" ColumnName="TranslatorFile" />
+                <ScalarProperty Name="isTranslatorDone" ColumnName="isTranslatorDone" />
+                <ScalarProperty Name="isTranslatorProgress" ColumnName="isTranslatorProgress" />
+                <ScalarProperty Name="isTranslatorReceived" ColumnName="isTranslatorReceived" />
+                <ScalarProperty Name="isMailSentToTranslator" ColumnName="isMailSentToTranslator" />
+                <ScalarProperty Name="TranslatorDeadLine" ColumnName="TranslatorDeadLine" />
+                <ScalarProperty Name="TranslatorWordPrice" ColumnName="TranslatorWordPrice" />
+                <ScalarProperty Name="WordCount" ColumnName="WordCount" />
+                <ScalarProperty Name="TaskDescription" ColumnName="TaskDescription" />
+                <ScalarProperty Name="TaskFile" ColumnName="TaskFile" />
+                <ScalarProperty Name="TaskStatus" ColumnName="TaskStatus" />
+                <ScalarProperty Name="TaskSerial" ColumnName="TaskSerial" />
+                <ScalarProperty Name="ReviewerID" ColumnName="ReviewerID" />
+                <ScalarProperty Name="TranslatorID" ColumnName="TranslatorID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="Model.Payment">
+              <MappingFragment StoreEntitySet="Payments">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="NextPaymentDate" ColumnName="NextPaymentDate" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="PaymentDirection" ColumnName="PaymentDirection" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

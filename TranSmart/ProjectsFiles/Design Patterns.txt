@@ -1,0 +1,48 @@
+-------------- Behavioral -------------- 
+1- Mediator
+
+2- Strategy
+
+3- Iterator
+
+4- Chain of Responsibility
+
+5- Command
+
+6- Interpreter
+
+7- Memento
+
+8- Observer
+
+9- State
+
+10- Template Method 
+
+11- Visitor
+
+-------------- Creational -------------- 
+12- Abstract Factory
+
+13- Builder
+
+14- Factory Method
+
+15- Prototype 
+
+16- Singleton
+
+-------------- Structural -------------- 
+17- Adapter
+
+18- Bridge
+
+19- Composite
+
+20- Decorator
+
+21- Facade
+
+22- Flyweight 
+
+23- Proxy

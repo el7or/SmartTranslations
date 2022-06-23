@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="home" id="ApplicationPath" href="./">
+    <!--<link rel="icon" type="image/x-icon" href="./favicon.ico">-->
+    <!--<link href="./Content/font-open-sans.css?v=_lyM_7sDAZstbPZ6aTr8rQ2" rel="stylesheet" type="text/css">-->
+
+    <link href="./Content/font-awesome.css?v=xJVlSGl4W8PfYCFmFoFK0Q2" rel="stylesheet" type="text/css">
+
+    <link href="./Content/simple-line-icons.css?v=CTymYjlO1pj9tYNeQl0o3Q2" rel="stylesheet" type="text/css">
+
+    <link href="./Content/ionicons.css?v=8nNUsorzz0jSgmDAMwXQzg2" rel="stylesheet" type="text/css">
+
+    <!--<link href="./Content/aristo/aristo.css?v=MvOjKTOOh8qSpUV6_HAAHw2" rel="stylesheet" type="text/css">-->
+
+    <link href="./Content/bootstrap.css?v=KjHcoRLyaSO1FnbLdkxY1Q2" rel="stylesheet" type="text/css">
+
+    <!--<link href="./Content/colorbox/jquery.colorbox.css?v=XnRFE7k2jxZ7HVn-r2Jaww2" rel="stylesheet" type="text/css">
+
+    <link href="./Content/jquery.fileupload.css?v=T6JqyTNuIq_tJ7F3R_5z3g2" rel="stylesheet" type="text/css">
+
+    <link href="./Content/pace.css?v=L_wBl1JNKiTT55UKpioDig2" rel="stylesheet" type="text/css">
+
+    <link href="./Content/slick.grid.css?v=Qhl0MYjRyBVihAtJg0CyYg2" rel="stylesheet" type="text/css">-->
+
+    <!--<link href="./Content/css/select2.css?v=qz1jk8aVr8t_14LSWpFqJA2" rel="stylesheet" type="text/css">-->
+
+    <!--<link href="./Content/toastr.css?v=lykj60CDw5t8wg1dl5y0OA2" rel="stylesheet" type="text/css">-->
+
+    <!--<link href="./Content/serenity/serenity.css?v=uTPfgAX12ceg-ad7n9yYtg2" rel="stylesheet" type="text/css">-->
+
+    <link href="./Content/site/site.css?v=ksOlKj_vUq2_NlGbmXoOgg2" rel="stylesheet" type="text/css">
+
+    <link href="./Content/site/site.rtl.css?v=EpnWljjfnFlUY0wsoCpuKg2" rel="stylesheet" type="text/css">
+
+    <!--<script type="application/json" id="ScriptCulture">
+        {"DateOrder":"dmy","DateFormat":"dd/MM/yyyy","DateSeparator":"./","DateTimeFormat":"dd/MM/yyyy HH:mm:ss","DecimalSeparator":".","GroupSepearator":","}
+    </script>
+    <script type="text/javascript">window.paceOptions = { minTime: 250, ghostTime: 250, restartOnRequestAfter: 250, ajax: { trackMethods: ['GET', 'POST'], trackWebSockets: true, ignoreURLs: [] } };</script>
+    <script src="./Scripts/pace.js?v=evfXQgyADGar15z3wQSTJA2" type="text/javascript"></script>
+
+    <script src="./Scripts/rsvp.js?v=ueGo_q7N2s93Y-AzfUrs8A2" type="text/javascript"></script>
+    <script src="./Scripts/jquery-3.1.1.js?v=RoNrvGA8lWW1zAYRAMy6yA2" type="text/javascript"></script>
+    <script src="./Scripts/jquery-ui-1.12.1.js?v=q1KE3l49Ih5TZH_TSOVkSw2" type="text/javascript"></script>
+    <script src="./Scripts/jquery-ui-i18n.js?v=fAmmyIS6gdv3hjEK_SFl9Q2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.validate.js?v=Q3Q3qwsR7Ja623fum9IuDw2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.blockUI.js?v=pK0cWqNrGE32YMv5pAHwjQ2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.cookie.js?v=1VKN3gAGx4vgSBcyfC-bbw2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.json.js?v=ojEuMerciKpf9J0ukgaNyg2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.autoNumeric.js?v=Cx_a1fBvtVV4DjFAtii2Yw2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.colorbox.js?v=lWVLMExZxFAtnKWbSFmEUQ2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.dialogextendQ.js?v=q4CdCMYs_hImIJk7B7KATg2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.event.drag.js?v=Q42_cWjms19Czv7rSFThUg2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.scrollintoview.js?v=j4tgWM1381VKsGUok8so9w2" type="text/javascript"></script>
+    <script src="./Scripts/select2.js?v=mb-susqgC8W2T0C4V7rb5g2" type="text/javascript"></script>
+    <script src="./Scripts/sortable.js?v=BBvydRU72CWAGeMpFpM-_Q2" type="text/javascript"></script>
+    <script src="./Scripts/toastr.js?v=gOnkqpQBPIBBWDh-h2vjsg2" type="text/javascript"></script>
+    <script src="./Scripts/SlickGrid/slick.core.js?v=BLCRBDx7U3jsEuDNgnEQkw2" type="text/javascript"></script>
+    <script src="./Scripts/SlickGrid/slick.grid.js?v=f5lvq3M8mdFxwZoSgj7E8w2" type="text/javascript"></script>
+    <script src="./Scripts/SlickGrid/slick.groupitemmetadataprovider.js?v=RUFU1x9TDSkyvChFWteLsA2" type="text/javascript"></script>
+    <script src="./Scripts/SlickGrid/Plugins/slick.autotooltips.js?v=-AIKLINWiZmkA-CnhA5ZRQ2" type="text/javascript"></script>
+    <script src="./Scripts/SlickGrid/Plugins/slick.headerbuttons.js?v=9YOWFAIrd9_PYSbDwFxdqg2" type="text/javascript"></script>
+    <script src="./Scripts/bootstrap.js?v=-4FUnuKJZROh7VcUsbGg8A2" type="text/javascript"></script>
+    <script src="./Scripts/saltarelle/mscorlib.js?v=AO_L_1E_BHK8K8k5pu8Fmg2" type="text/javascript"></script>
+    <script src="./Scripts/serenity/Serenity.CoreLib.js?v=JUDCYVeHtw6kQtpTs3EhMA2" type="text/javascript"></script>
+    <script src="./Scripts/serenity/Serenity.Script.UI.js?v=6fXOtbJRCJlqG560c8Uo6g2" type="text/javascript"></script>
+    <script src="./Scripts/jquery.cropzoom.js?v=ju9wbWcKr48aWqD5qkXCcQ2" type="text/javascript"></script>
+
+    <script src="./Scripts/jquery.fileupload.js?v=e-hGpVezhrzCNo0tj4bR2A2" type="text/javascript"></script>
+
+    <script src="./Scripts/jquery.iframe-transport.js?v=mCjCNWoMY71LgLOhwmmOGQ2" type="text/javascript"></script>
+
+    <script src="./Scripts/jquery.maskedinput.js?v=HN6v6EEgtiHc2VNZKpTJmA2" type="text/javascript"></script>
+
+    <script src="./Scripts/jquery.slimscroll.js?v=buWrXYmFe-bq8Itj6zJGsA2" type="text/javascript"></script>
+
+    <script src="./Scripts/SlickGrid/Plugins/slick.rowselectionmodel.js?v=XribFqTCdkXWmUfvTfmwMw2" type="text/javascript"></script>
+
+    <script src="./Scripts/mousetrap.js?v=LZ3oO7G3uh_XrsUxuoHUpA2" type="text/javascript"></script>
+
+    <script src="./Scripts/fastclick/fastclick.js?v=bp07DadPKkpwQrSUzap8Lg2" type="text/javascript"></script>
+
+    <script src="./Scripts/adminlte/app.js?v=sEFfHWOWYAV53y-2WWKVgw2" type="text/javascript"></script>
+
+    <script src="./Scripts/Site/Serene2.Web.js?v=2y5llTOJDyVUK1UKIcCA6w2" type="text/javascript"></script>-->
+
+
+    <!--<script src="./DynJS.axd/LocalText.Site.ar.Public.js?v=BDOsDJGELpGmRDf8zJIphw2"></script>
+    <script src="./DynJS.axd/ColumnsBundle.js?v=F7BqoKffCHQoVIowRCJVRQ2"></script>
+    <script src="./DynJS.axd/FormBundle.js?v=eiozD-In_QQFeYB5DmmKmQ2"></script>
+    <script src="./DynJS.axd/TemplateBundle.js?v=cEkxRLKm4zWSND08PDGB2Q2"></script>
+    <script src="./DynJS.axd/RegisteredScripts.js?v=VIwl6ClJEvoPXx97jMyJPw2"></script>
+
+    <link rel="stylesheet" href="./Content/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="./Scripts/morris/morris.css">
+    <link rel="stylesheet" href="./Scripts/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="./Scripts/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="./Scripts/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="./Scripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <script src="./Scripts/raphael/raphael-min.js"></script>
+    <script src="./Scripts/morris/morris.min.js"></script>
+    <script src="./Scripts/sparkline/jquery.sparkline.min.js"></script>
+    <script src="./Scripts/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="./Scripts/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="./Scripts/knob/jquery.knob.js"></script>
+    <script src="./Scripts/daterangepicker/moment.min.js"></script>
+    <script src="./Scripts/daterangepicker/daterangepicker.js"></script>
+    <script src="./Scripts/datepicker/bootstrap-datepicker.js"></script>
+    <script src="./Scripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="./Scripts/adminlte/pages/dashboard.js"></script>
+    <script src="./Scripts/adminlte/demo.js"></script>-->
+
+    <!--<title>Dashboard - Serene2</title>
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>-->
+</head>
+<body  >
+    <div class="content-wrapper" style="min-height: 721.6px;">
+        <!--<section class="content-header">
+
+            <h1>Dashboard<small>a sample with random data (from free <em><a href="https://almsaeedstudio.com/" target="_blank">AdminLTE theme</a></em>)</small></h1>
+
+        </section>-->
+        <section class="content" style="min-height: 630.2px;">
+
+
+
+
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3>21</h3>
+                            <p>Open Orders</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="./Northwind/Order?shippingState=0" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3>97<sup style="font-size: 20px">%</sup></h3>
+                            <p>Closed Orders</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-stats-bars"></i>
+                        </div>
+                        <a href="./Northwind/Order?shippingState=1" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3>91</h3>
+                            <p>Total Customers</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="./Northwind/Customer" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div><!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3>77</h3>
+                            <p>Different Products</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-pie-graph"></i>
+                        </div>
+                        <a href="./Northwind/Product" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div><!-- ./col -->
+            </div><!-- /.row -->
+           
+
+        </section>
+    </div>
+</body>
+</html>
